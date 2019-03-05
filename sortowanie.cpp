@@ -26,17 +26,20 @@ int main()
     int *tab1 = new int[n]; int *tab2 = new int[n]; int *tab3 = new int[n]; int *tab4 = new int[n]; int *tab5 = new int[n];
     generator(tab1,tab2,tab3,tab4,tab5);
     //WYWOLYWANIE FUNKCJI
-    /*np. insertion_sort(tab1-5); print(tab1-5);
-          generator(tab1,tab2,tab3,tab4,tab5);   <-- zeby wygenerowac ciagi na nowo(nie byly posortowane)
-          inny_sort(tab1-5); print(tab1-5);
+    /*np. 
+    print(tab1-5);
+    insertion_sort(tab1-5); 
+    print(tab1-5);
+    generator(tab1,tab2,tab3,tab4,tab5);   <-- zeby wygenerowac ciagi na nowo(nie byly posortowane)
+    print(tab1-5);
+    inny_sort(tab1-5); 
+    print(tab1-5);
           ...
     */
+    //USTALENIE CZASU DZIALANIA ALGORYTMU
     start = clock();
-    //WYWOLYWANIE ALGORYTMU SORTOWANIA
-    print(tab2);
+  
     insertion_sort(tab2);
-    print(tab2);
-    //
     stop = clock();
     time = (double)(stop - start);
     cout<<endl<<"Czas wykonywania algorytmu: "<<time<< "ms"<<endl;
