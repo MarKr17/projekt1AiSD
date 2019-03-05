@@ -23,20 +23,30 @@ int main()
     int *tab1 = new int[n]; int *tab2 = new int[n]; int *tab3 = new int[n]; int *tab4 = new int[n]; int *tab5 = new int[n];
     generator(tab1,tab2,tab3,tab4,tab5);
     //WYWOLYWANIE FUNKCJI
-    /*np. insertion_sort(tab1-5); print(tab1-5);
-          generator(tab1,tab2,tab3,tab4,tab5);   <-- zeby wygenerowac ciagi na nowo(nie byly posortowane)
-          inny_sort(tab1-5); print(tab1-5);
+    /*np. 
+    insertion_sort(tab1-5); print(tab1-5);print(tab1);
+    insertion_sort(tab1);
+    print(tab1);
+    generator(tab1,tab2,tab3,tab4,tab5);   <-- zeby wygenerowac ciagi na nowo(nie byly posortowane)
+    inny_sort(tab1-5); print(tab1-5);
           ...
     */
     delete[] tab1; delete[] tab2; delete[] tab3; delete[] tab4; delete[] tab5;
 }
 void insertion_sort(int tab[])
 {
-    int j=0;
     for(int i=0;i<n;i++)
     {
-        while();
+        int j=i;
+        while(j>0 && tab[j-1]>tab[j])
+        {
+            int tmp=tab[j-1];
+            tab[j-1]=tab[j];
+            tab[j]=tmp;
+            j--;
+        }
     }
+
 }
 void generator(int tab1[], int tab2[], int tab3[], int tab4[], int tab5[])
 {
